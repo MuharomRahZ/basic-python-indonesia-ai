@@ -1,10 +1,10 @@
 #TUGAS FINAL PROJECT
 #referensi - https://realpython.com/python-send-email/#sending-multiple-personalized-emails
 
-import smtplib, ssl
+import smtplib, ssl, getpass
 
 gmail_sender = input(str("Masukkan akun gmail pengirim: "))
-password_sender = input("Masukkan password pengirim: ")
+password_sender = getpass.getpass(prompt="Masukkan password pengirim (tersembunyi): ")
 
 
 context = ssl.create_default_context() #membuat protokol pengiriman email dengan default
